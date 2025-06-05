@@ -131,7 +131,7 @@ sudo chmod +x scripts/backupsite.sh scripts/start_bench.sh
 sudo tee -a "$DIRECTORY"/scripts/backupsite.sh > /dev/null <<EOL
 #!/bin/bash
 cd /home/frappe/frappe-bench/sites/
-bench --site $SITE_NAME backup --with-files --backup-path /home/"$FRAPPE_USER"/backup/$SITE_NAME/
+bench --site $SITE_NAME backup --with-files --backup-path "$DIRECTORY"/backup/$SITE_NAME/
 EOL
 
   
