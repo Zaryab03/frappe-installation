@@ -72,6 +72,7 @@ sudo service mysql restart
 
 # Install Node.js via NVM
 # Add new changes
+cd "$DIRECTORY"
 sudo apt install -y curl
 curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 export NVM_DIR="/home/$FRAPPE_USER/.nvm"
