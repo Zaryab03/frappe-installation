@@ -5,7 +5,7 @@ echo "Server Configuration Setup has started..."
 echo "==========================="
 
 # Variables
-MYSQL_ROOT_PASSWORD="mariab@123"
+MYSQL_ROOT_PASSWORD="mariadb@123"
 FRAPPE_USER="frappe"
 DIRECTORY="/home/$FRAPPE_USER"
 SITE_NAME="erp.samsons.com"
