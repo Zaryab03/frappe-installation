@@ -75,10 +75,8 @@ sudo service mysql restart
 cd "$DIRECTORY"
 sudo apt install -y curl
 curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
-export NVM_DIR="/home/$FRAPPE_USER/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-source /home/$FRAPPE_USER/.profile
-nvm install 18
+sudo -i -u $FRAPPE_USER bash -c 'export NVM_DIR="$HOME/.nvm"; [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"; nvm install 18'
+
 
 
 
