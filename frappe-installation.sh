@@ -111,14 +111,18 @@ bench get-app --branch main https://github.com/sowaan/leaf_procurement.git
 cd ../sites/
 bench --site "$SITE_NAME" install-app erpnext
 bench --site "$SITE_NAME" install-app leaf_procurement
-bench --site "$SITE_NAME" migrate
-
-
 
 # Bench start 
 nohup bench start &
 sleep 20
 ps aux | grep "honcho"
+
+
+bench --site "$SITE_NAME" migrate
+
+
+
+
 
 
 # scripts and directories setup 
