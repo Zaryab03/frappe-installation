@@ -8,9 +8,9 @@ echo "==========================="
 MYSQL_ROOT_PASSWORD="mariadb@123"
 FRAPPE_USER="frappe"
 DIRECTORY="/home/$FRAPPE_USER"
-SITE_NAME="erp.samsons.com"
-DB_NAME="samsons"
-ADMIN_PASS="SowaanERP"
+SITE_NAME="erp.abc.com"
+DB_NAME="db01"
+ADMIN_PASS="ERP@123456"
 
 cd "$DIRECTORY"
 
