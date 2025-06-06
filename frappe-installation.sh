@@ -101,7 +101,9 @@ cd "$DIRECTORY"/frappe-bench/sites
 
 
 # Create new site (manual password entry required)
-bench new-site --db-name "$DB_NAME" --admin-password "$ADMIN_PASS" "$SITE_NAME"
+bench new-site --db-name "$DB_NAME" --admin-password "$ADMIN_PASS" "$SITE_NAME" --db-root-password "$MYSQL_ROOT_PASSWORD" 
+
+
 
 cd ../apps/
 bench get-app --branch version-15 https://github.com/sowaan/erpnext.git
