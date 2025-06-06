@@ -127,14 +127,14 @@ bench --site "$SITE_NAME" migrate
 
 # scripts and directories setup 
 cd "$DIRECTORY"
-mkdir -p backup/erp.samsons.com 
-touch "$DIRECTORY"/scripts/backupsite.sh "$DIRECTORY"/scripts/start_bench.sh logs
-sudo chmod +x "$DIRECTORY"/scripts/backupsite.sh "$DIRECTORY"/scripts/start_bench.sh
+mkdir -p backup/erp.samsons.com scripts logs
+touch /scripts/backupsite.sh /scripts/start_bench.sh
+sudo chmod +x /scripts/backupsite.sh /scripts/start_bench.sh
 
 
 
 # add backup script data
-sudo tee -a "$DIRECTORY"/scripts/backupsite.sh > /dev/null <<EOL
+sudo tee -a /scripts/backupsite.sh > /dev/null <<EOL
 #!/bin/bash
 cd /home/frappe/frappe-bench/sites/
 bench --site $SITE_NAME backup --with-files --backup-path "$DIRECTORY"/backup/$SITE_NAME/
