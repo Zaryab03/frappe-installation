@@ -135,7 +135,7 @@ sudo chmod +x backupsite.sh start_bench.sh
 
 
 # add backup script data
-sudo tee -a /scripts/backupsite.sh > /dev/null <<EOL
+sudo tee -a backupsite.sh > /dev/null <<EOL
 #!/bin/bash
 cd /home/frappe/frappe-bench/sites/
 bench --site $SITE_NAME backup --with-files --backup-path "$DIRECTORY"/backup/$SITE_NAME/
@@ -145,7 +145,7 @@ EOL
 
 
 # add backup script data
-sudo tee -a "$DIRECTORY"/scripts/start_bench.sh > /dev/null <<EOL
+sudo tee -a start_bench.sh > /dev/null <<EOL
 #!/bin/bash
 
 cd "$DIRECTORY"/frappe-bench
@@ -159,5 +159,5 @@ echo "======================="
 ps aux | grep "honcho"
 EOL
 
-
+echo " ======================================================================================================="
 echo "Setup completed, please check the scripts in /home/$USER/scripts/ for backup and start bench operations."
