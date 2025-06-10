@@ -128,8 +128,9 @@ bench --site "$SITE_NAME" migrate
 # scripts and directories setup 
 cd "$DIRECTORY"
 mkdir -p backup/erp.samsons.com scripts logs
-touch /scripts/backupsite.sh /scripts/start_bench.sh
-sudo chmod +x /scripts/backupsite.sh /scripts/start_bench.sh
+cd "$DIRECTORY"/scripts
+touch backupsite.sh start_bench.sh
+sudo chmod +x backupsite.sh start_bench.sh
 
 
 
