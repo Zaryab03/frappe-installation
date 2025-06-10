@@ -107,7 +107,8 @@ sleep 20
 ps aux | grep "honcho"
 
 
-bench --site "$SITE_NAME" migrate
+bench --site "$SITE_NAME" migrate --skip-failing
+
 
 
 
