@@ -70,17 +70,6 @@ sudo service mysql restart
 
 
 
-# Install Node.js via NVM
-# Add new changes
-cd "$DIRECTORY"
-sudo apt install -y curl
-curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
-sudo -i -u $FRAPPE_USER bash -c 'export NVM_DIR="$HOME/.nvm"; [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"; nvm install 18'
-
-
-
-
-
 # Install npm, yarn, and frappe-bench
 sudo apt-get install -y npm
 sudo npm install -g yarn
