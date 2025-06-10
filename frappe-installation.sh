@@ -102,12 +102,14 @@ bench --site "$SITE_NAME" install-app erpnext
 bench --site "$SITE_NAME" install-app leaf_procurement
 
 # Bench start 
-nohup bench start &
+bench start &
 sleep 20
 ps aux | grep "honcho"
 
 
 bench --site "$SITE_NAME" migrate --skip-failing
+bench use erp.samsons.com
+
 
 
 
