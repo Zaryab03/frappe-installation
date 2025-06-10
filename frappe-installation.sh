@@ -98,6 +98,7 @@ cd ../apps/
 bench get-app --branch version-15 https://github.com/sowaan/erpnext.git
 bench get-app --branch main https://github.com/sowaan/leaf_procurement.git 
 cd ../sites/
+bench use erp.samsons.com
 bench --site "$SITE_NAME" install-app erpnext
 bench --site "$SITE_NAME" install-app leaf_procurement
 
@@ -108,7 +109,7 @@ ps aux | grep "honcho"
 
 
 bench --site "$SITE_NAME" migrate --skip-failing
-bench use erp.samsons.com
+
 
 
 
