@@ -148,5 +148,7 @@ echo "======================="
 ps aux | grep "honcho"
 EOL
 
+timedatectl set-timezone Asia/Karachi
+
 echo " ======================================================================================================="
 echo "Setup completed, please check the scripts in /home/$USER/scripts/ for backup and start bench operations."
