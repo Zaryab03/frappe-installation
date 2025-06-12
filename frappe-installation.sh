@@ -104,23 +104,14 @@ bench --site "$SITE_NAME" install-app leaf_procurement
 
 # Bench start 
 bench start &
-sleep 20
-ps aux | grep "honcho"
-
 
 bench --site "$SITE_NAME" migrate --skip-failing
 
 
 
-
-
-
-
-
-
 # scripts and directories setup 
 cd "$DIRECTORY"
-mkdir -p backup/erp.samsons.com scripts logs
+mkdir -p backup/erp.samsons.com logs
 cd "$DIRECTORY"/scripts
 touch backupsite.sh start_bench.sh
 sudo chmod +x backupsite.sh start_bench.sh
@@ -140,16 +131,28 @@ EOL
 # add backup script data
 sudo tee -a start_bench.sh > /dev/null <<EOL
 #!/bin/bash
+sleep 6
 
-cd "$DIRECTORY"/frappe-bench
+# Load NVM manually (critical!)
+export NVM_DIR="/home/frappe/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+# Activate Node.js 18
+nvm use 18
+
+echo " "
+echo "ERP STATUS - $(date)"
+echo " "
+
+cd /home/frappe/frappe-bench1
+
+#Checking node version
+node --version
+
+echo " "
 echo "Bench starting..."
 echo "================="
 bench start &
-sleep 15
-echo " "
-echo "Active Bench Processes:"
-echo "======================="
-ps aux | grep "honcho"
 EOL
 
 timedatectl set-timezone Asia/Karachi
