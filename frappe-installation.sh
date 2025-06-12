@@ -16,7 +16,7 @@ cd "$DIRECTORY"
 
 # Install required packages
 sudo apt-get update -y
-sudo apt-get upgrade -y vim net-tools screen htop 
+sudo apt-get upgrade -y vim net-tools
 sudo apt-get install -y git
 sudo apt-get install -y python3-dev python3.10-dev python3-setuptools python3-pip python3-distutils
 sudo apt-get install -y python3.10-venv
