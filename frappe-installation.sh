@@ -157,5 +157,10 @@ EOL
 
 timedatectl set-timezone Asia/Karachi
 
+# Install and configure Avahi for mDNS
+sudo apt install -y avahi-daemon
+sudo systemctl enable avahi-daemon
+sudo systemctl start avahi-daemon
+
 echo " ======================================================================================================="
 echo "Setup completed, please check the scripts in /home/$USER/scripts/ for backup and start bench operations."
