@@ -157,6 +157,15 @@ EOL
 
 timedatectl set-timezone Asia/Karachi
 
+# Nginx installation
+sudo apt-get install -y nginx
+sudo systemctl enable nginx
+sudo systemctl start nginx
+
+# Install and configure Certbot for SSL 
+sudo apt install mkcert -y
+mkcert -install
+
 # Install and configure Avahi for mDNS
 sudo apt install -y avahi-daemon
 sudo systemctl enable avahi-daemon
